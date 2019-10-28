@@ -6,6 +6,7 @@ import Nav from './components/Nav'
 import NotFound from './components/NotFound'
 import Form from './components/Form'
 import PhotoContainer from './components/PhotoContainer'
+import apiKey from './config'
 
 function App() {
   return (
