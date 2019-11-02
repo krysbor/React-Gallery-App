@@ -1,14 +1,26 @@
 import React from 'react'
 
-function Nav() {
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
+
+  import Form from './Form'
+
+function Nav(props) {
+
     return (
         <nav className="main-nav">
             <ul>
-                <li><a href='#'>Cats</a></li>
-                <li><a href='#'>Dogs</a></li>
-                <li><a href='#'>Computers</a></li>
+                <li><Link to="/cats" onClick={e => {props.getData('cats')}}>Cats</Link></li>
+                <li><Link to="/dogs" onClick={e => {props.getData('dogs')}}>Dogs</Link></li>
+                <li><Link to="/computers" onClick={e => {props.getData('computers')}}>Computers</Link></li>
             </ul>
         </nav>
+
+
     )
 }
 
