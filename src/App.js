@@ -102,7 +102,7 @@ class App extends React.Component {
 
             </Route>
 
-            <Route path="/:value">
+            <Route path="/search/:value">
              <PhotoContainer data={this.state.gifs} loaded={this.state.loaded} search={true} results={this.state.searchValue} />
 
             </Route>

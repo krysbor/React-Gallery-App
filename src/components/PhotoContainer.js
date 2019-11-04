@@ -3,24 +3,27 @@ import Photo from './Photo'
 import NotFound from './NotFound'
 
 
-class PhotoContainer extends React.Component {
-    render() {
+const PhotoContainer = (props) => {
+
+    //let value = match.params.value
+
+
         return (
             <div className="photo-container">
-                <h2>{this.props.results}</h2>
+                <h2>{props.results}</h2>
                 <ul>
                     {
-                        this.props.data.map((value, index) => {
-                            return <Photo photoUrl={value.url_l} key={value.id} />
+                        props.data.map((value, index) => {
+                            return <Photo photoUrl={value.url_sq} key={value.id} />
                         })
                     }
-                        {this.props.results === ''?
+                        {props.results === ''?
                         <NotFound /> : null }
                     </ul>
                 </div>
             )
 
-    }
+
 }
 
 export default PhotoContainer
