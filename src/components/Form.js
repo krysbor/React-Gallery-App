@@ -1,8 +1,6 @@
 import React from 'react'
 import { withRouter } from 'react-router-dom';
 
-
-
 class Form extends React.Component {
 
     constructor() {
@@ -14,11 +12,13 @@ class Form extends React.Component {
 
     }
 
+    /*Updates state based on current value of the input field*/
     onSearchChange = e => {
         this.setState({
             inputValue: e.target.value
         })
     }
+
 
     handleSubmit = e => {
         e.preventDefault();
@@ -27,10 +27,6 @@ class Form extends React.Component {
         this.props.history.push(path)
         this.props.handleSearch(this.state.inputValue, this.state.inputValue)
         e.currentTarget.reset()
-
-
-
-
     }
 
     render() {

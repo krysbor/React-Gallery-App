@@ -1,3 +1,7 @@
+# React Gallery App
+Single page gallery application using the React library and Flickr API.
+Dynamically displays images from the Flickr API based on the three options available or by a user-specified value
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

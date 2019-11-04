@@ -5,9 +5,6 @@ import NotFound from './NotFound'
 
 const PhotoContainer = (props) => {
 
-    //let value = match.params.value
-
-
         return (
             <div className="photo-container">
                 <h2>{props.results}</h2>
@@ -22,8 +19,6 @@ const PhotoContainer = (props) => {
                     </ul>
                 </div>
             )
-
-
 }
 
 export default PhotoContainer

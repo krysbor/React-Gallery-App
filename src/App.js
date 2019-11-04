@@ -1,9 +1,6 @@
 import React from 'react';
-
 import './App.css';
-
 import Nav from './components/Nav'
-
 import Form from './components/Form'
 import PhotoContainer from './components/PhotoContainer'
 import apiKey from './config'
@@ -13,8 +10,6 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-
-
 
 class App extends React.Component {
 
@@ -29,6 +24,7 @@ class App extends React.Component {
     }
   }
 
+  /*Gets random pictures on home page*/
   componentDidMount() {
     this.getData('pictures')
   }
@@ -37,7 +33,7 @@ class App extends React.Component {
     return true
   }
 
-
+  /*Fetches  data from the API and stores data in component's state*/
   getData = (query) => {
 
     this.setState({
@@ -55,6 +51,7 @@ class App extends React.Component {
     })
   }
 
+  /*Fetches data from the API by value specified by the user in search input*/
   handleSearch = (query, searchValue) => {
     this.setState({
       loaded: false
@@ -71,8 +68,6 @@ class App extends React.Component {
       })
     })
   }
-
-
 
   render() {
     return (
